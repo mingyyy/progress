@@ -7,8 +7,11 @@ A track record of topics and interesting facts that I've learned each week.
 1. Command Lines
 
 go to directory
+
 $ cd ~/desktop
+
 $ cd ..
+
 $ cd -
 
 to list what's in the current folder
