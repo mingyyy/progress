@@ -4,7 +4,7 @@ A track record of topics and interesting facts that I've learned each week.
 
 ## Week 1
 ### Tuesday
-1. Command Lines
+**1. Command Lines**
 
 *go to directory*
 
@@ -80,15 +80,16 @@ $ #!/bin/bash
 
 *To make it executable, must make sure "r w x" has the x turned on*
 
- 2^2 = 4  r = read
+ 2^2 = 4    r = read
  
- 2^1 = 2  w = write
+ 2^1 = 2    w = write
  
- 2^0 = 1  x = execute
+ 2^0 = 1    x = execute
  
 *so a file that is rwx = 7, rx = 5, x = 1, r = 4(read only)...concept of binary*
 
-2. Git & GitHub
+
+**2. Git & GitHub**
 
 $ git init
 
@@ -110,4 +111,4 @@ $ git pull origin http://.... (origin could be any name)
 
 *It is possible to have more than one remote,e.g. pull from github/codingnomads and push to github/personal*
 
-3. 
+
