@@ -6,7 +6,7 @@ A track record of topics and interesting facts that I've learned each week.
 ### Tuesday
 1. Command Lines
 
-go to directory
+*go to directory*
 
 $ cd ~/desktop
 
@@ -14,17 +14,22 @@ $ cd ..
 
 $ cd -
 
-to list what's in the current folder
+*to list what's in the current folder*
+
 $ ls -alrt (or l in Zshell)
+
 $ ls -rthl
 
-to make a new folder
+*to make a new folder*
+
 $ mkdir <folder_name>
 
 to create a new file
+
 $ touch <file_name>
 
 to write into a file (add to the end)
+
 $ echo "xxx" >> <file_name>
 
 to write into a file (overwrite)
