@@ -89,6 +89,7 @@ $ #!/bin/bash
 *so a file that is rwx = 7, rx = 5, x = 1, r = 4(read only)...concept of binary*
 
 
+
 **2. Git & GitHub**
 
 $ git init
@@ -107,8 +108,10 @@ $ git -rm -cached <file_name>
 
 $ git commit -m "xxx"
 
-$ git pull origin http://.... (origin could be any name)
+$ git pull origin master http://.... (origin could be any name)
 
 *It is possible to have more than one remote,e.g. pull from github/codingnomads and push to github/personal*
+
+*Don't create git folders inside other git folders*
 
 
