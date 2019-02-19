@@ -8,11 +8,9 @@ A track record of topics and interesting facts that I've learned each week.
 
 *go to directory*
 
-$ cd ~/desktop
-
-$ cd ..
-
-$ cd -
+  *$ cd ~/desktop
+  *$ cd ..
+  *$ cd -
 
 *to list what's in the current folder*
 
