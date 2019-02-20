@@ -145,3 +145,6 @@ Jupyter: *popular in DataScience, visualization, markdown files.
 repl.it: *easy to put up a small piece of code and share the link with others, web-based
 
 PyCharm: *have project structure, python consol, terminal and others 
+
+*Alt + the line, so you can change all of them at once
+*select something, right click, refactor and rename it
