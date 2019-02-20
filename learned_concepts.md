@@ -52,7 +52,7 @@ $ rm <file_name>
 
 $ mv <file_name> <file_name2>
 
-*to print working directory*
+*to print working directory - know where you are*
 
 $ pwd
 
@@ -100,7 +100,7 @@ $ git remote add origin http://.... (origin could be any name)
 
 $ git remote -v
 
-$ git push -u origin master (origin could be any name)
+$ git push -u <remote_name> <branch_name> (origin master)
 
 $ git add <file_name>
 
@@ -108,7 +108,7 @@ $ git -rm -cached <file_name>
 
 $ git commit -m "xxx"
 
-$ git pull origin master http://.... (origin could be any name)
+$ git pull <remote_name> <branch_name> http://.... (origin master)
 
 *It is possible to have more than one remote,e.g. pull from github/codingnomads and push to github/personal*
 
