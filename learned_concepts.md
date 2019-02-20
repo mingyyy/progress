@@ -115,3 +115,6 @@ $ git pull <remote_name> <branch_name> http://.... (origin master)
 *Don't create git folders inside other git folders*
 
 
+### Wednesday
+
+
