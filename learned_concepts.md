@@ -73,10 +73,13 @@ to save and quit -> esc + :wq <file_name>
 
 to force quit -> esc + :q!
 
-*To write an terminal exec file, start with this line*
+*To write an terminal exec file, start with this line, where "shabang" means find the executable.*
 
 $ #!/bin/bash
 
+* To run the file in Terminal
+
+$ bash <file_name>
 
 *To make it executable, must make sure "r w x" has the x turned on*
 
@@ -116,5 +119,18 @@ $ git pull <remote_name> <branch_name> http://.... (origin master)
 
 
 ### Wednesday
+1. Pull from codingnomads to incorporate the new change in README.md
+
+$ git pull origin master
+
+Pull from mingyyy to incorporate new changes in learned_concepts
+
+$ git pull ming master
+
+* There might be a vim window opens to ask for comments of the merge. 
+* Change the comments or leave it (default), esc + :wq to continue
+
+2. we can hide some files in .gitignore, so they won't be pushed to GitHub
+
 
 
