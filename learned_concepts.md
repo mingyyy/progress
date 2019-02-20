@@ -132,5 +132,14 @@ $ git pull ming master
 
 2. we can hide some files in .gitignore, so they won't be pushed to GitHub
 
+3. compare the difference of TextEditors
 
+Vim
 
+Sublime Text
+
+Jupyter
+
+repl.it
+
+PyCharm
