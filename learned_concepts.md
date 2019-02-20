@@ -142,6 +142,6 @@ Sublime Text (ATOM, VsCode): *More user friendly Text, editing, not a lot of fun
 
 Jupyter: *popular in DataScience, visualization, markdown files.
 
-repl.it: *easy to put up a small piece of code and share with others, web-based
+repl.it: *easy to put up a small piece of code and share the link with others, web-based
 
-PyCharm
+PyCharm: *have project structure, python consol, terminal and others 
