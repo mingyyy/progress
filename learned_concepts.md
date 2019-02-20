@@ -134,11 +134,13 @@ $ git pull ming master
 
 3. compare the difference of TextEditors
 
-Vim
+**To get out of a system: Ctrl + v or Ctrl + c
 
-Sublime Text
+Vim: *Access server directly, easy to use from Terminal.* 
 
-Jupyter
+Sublime Text (ATOM): *More user friendly Text, editing, not a lot of functionalities. Can't enter user input.
+
+Jupyter: *popular in DataScience
 
 repl.it
 
