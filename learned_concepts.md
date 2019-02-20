@@ -136,12 +136,12 @@ $ git pull ming master
 
 **To get out of a system: Ctrl + v or Ctrl + c
 
-Vim: *Access server directly, easy to use from Terminal.* 
+Vim (emacs): *Access server directly, easy to use from Terminal.* 
 
-Sublime Text (ATOM): *More user friendly Text, editing, not a lot of functionalities. Can't enter user input.
+Sublime Text (ATOM, VsCode): *More user friendly Text, editing, not a lot of functionalities. Can't enter user input.
 
-Jupyter: *popular in DataScience
+Jupyter: *popular in DataScience, visualization, markdown files.
 
-repl.it
+repl.it: *easy to put up a small piece of code and share with others, web-based
 
 PyCharm
