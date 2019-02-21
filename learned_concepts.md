@@ -163,4 +163,13 @@ file extention is a way to tell the computer what to do with the file
 .py - python file
 .sh - bash file
 
-* To comment on multiple lines -> select multiple lines and press **command + /
+*To comment on multiple lines -> select multiple lines and press **command + /
+
+print(argument)- a function apply to any type, normally
+'name = "ccc" - an instance of the string object
+'name.title()- a method *title* will do someting to *name*, object of a **class
+
+'my_list.append(3) - append method operate on the list instance *my_list*
+
+
+
