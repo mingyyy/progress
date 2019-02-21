@@ -171,5 +171,9 @@ print(argument)- a function apply to any type, normally
 
 'my_list.append(3) - append method operate on the list instance *my_list*
 
+*help(class.method) - give us the description of the method e.g. help(my_string.strip)
 
+*print(class.method) - show the info of the method in the class
+
+*select the method and then **command + B, shows the def of the method
 
