@@ -148,3 +148,19 @@ PyCharm: *have project structure, python consol, terminal and others
 
 *Alt + the line, so you can change all of them at once
 *select something, right click, refactor and rename it
+
+1. Change the apparence under Pycharm -> Preference
+2. shift + shift: to search
+3. alt + select same words in different lines, then all these can be changed
+4. ctrl + shift + r, first time to run the program
+5. ctrl + r, aftr running for the first time
+
+### Thursday
+1. chapter2 of the book, Variables and types
+
+file extention is a way to tell the computer what to do with the file
+
+.py - python file
+.sh - bash file
+
+* To comment on multiple lines -> select multiple lines and press **command + /
