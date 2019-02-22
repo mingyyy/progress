@@ -177,3 +177,13 @@ print(argument)- a function apply to any type, normally
 
 *select the method and then **command + B, shows the def of the method
 
+
+### Friday
+
+**iterables (if you can call for loop on it)**
+1. list: same or different data type. 
+2. range() is a class which is predefined.
+3. string
+4. generator: creats each itme on the go. don't need memory. 
+
+
