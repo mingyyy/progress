@@ -186,4 +186,12 @@ print(argument)- a function apply to any type, normally
 3. string
 4. generator: creats each itme on the go. don't need memory. 
 
+**LIST**
+1. slicing: first : defines where it starts and ends; second : defines the steps (-1) going backward
+2. mutable, while tuples are not.
+3. function sorted(mylist, reverse = True) which return the sorted list
+4. method mylist.sort() returns nothing, however sorted permenantly
 
+**Loop**
+1. definite: 
+2. indefinite:
