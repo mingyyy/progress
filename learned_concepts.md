@@ -215,3 +215,43 @@ $ history *shows the history of the command you used.
 
 **git init** --> make changes --> **git add <file_name>** --> **git commit -m "commit message"** --> **git push <remote-name> master 
 
+**git pull python-onsite everyday!
+**git push crashcourse everyday! The crash course book
+
+**git clone http://...** This will generate a folder automatically
+*git branch -a 
+*git branch -v
+*git log
+
+2. tuples: lists immutable. using () to create a tuple. 
+
+3. coding styles
+
+4. IF statement:  elif and else are optionals.
+```if x in string:
+      ...
+   elif condition:
+   else:
+```
+   
+5. comparison operators != <= >= == = 
+
+6. arithmetic operators: % + - / * // **
+
+7. short hand: -= += *= /=
+
+8. boolean: and or not
+True and True => True
+True and False => False
+True or False => True
+False or False => False
+
+9. is / is not: check the identity of the objects.
+Aliasing: assign one list to another list. So the two lists are the same => *new_list is my_list* returns *True
+
+ctrl t + rename: to rename all the variables in the file
+
+10. membership operators: in / not in
+
+
+    
