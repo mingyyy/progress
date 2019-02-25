@@ -196,17 +196,22 @@ print(argument)- a function apply to any type, normally
 1. definite: 
 2. indefinite:
 
-## Week2
+
+## Week 2
 ### Monday
 1. Git review
-*chsh* change shell
+$ chsh *change shell
 
-git remote add <name of the remote> <http://....>
+$ git remote add <name of the remote> <http://....>  
+  *each remote (repository on github) has many branches and a master branch
 
-each remote (repository on github) has many branches and a master branch
-
-gst (git status)
+$ gst (git status)
 
 we can put what we don't need ot push to github in *.gitignore file
 
+$ git config --global * there are some configuration files in your pc holding information of your email and passport
+
+$ history *shows the history of the command you used.
+
+**git init** --> make changes --> **git add <file_name>** --> **git commit -m "commit message"** --> **git push <remote-name> master 
 
