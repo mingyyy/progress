@@ -223,6 +223,9 @@ $ history *shows the history of the command you used.
 *git branch -v
 *git log
 
+create a git branch and push to the branch
+$ git push salt_remote caden_db_feature (what you are pushing: remote and branch name) 
+
 2. tuples: lists immutable. using () to create a tuple. 
 
 3. coding styles
