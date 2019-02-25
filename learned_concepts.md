@@ -195,3 +195,18 @@ print(argument)- a function apply to any type, normally
 **Loop**
 1. definite: 
 2. indefinite:
+
+## Week2
+### Monday
+1. Git review
+*chsh* change shell
+
+git remote add <name of the remote> <http://....>
+
+each remote (repository on github) has many branches and a master branch
+
+gst (git status)
+
+we can put what we don't need ot push to github in *.gitignore file
+
+
