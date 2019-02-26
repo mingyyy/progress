@@ -267,4 +267,15 @@ strings starts with "_" is for private functions. so don't use it!
 from a key to a value, quick look for something. A key has to be *unique* and of a *mutable* data type. So a list can't be a key. it's normally not ordered. can't have multiple value for one key. value can be another dictionary, any other immutable data structure. a value can't be empty.
 
 search from key to value, but the other way around. value is not unique.
+
+2. looping over dictionary
+three methods:
+1. .keys()
+2. .values()
+3. .items()
+
+3. While loop: Indefinite iteration 
+
+if a list is not empty it is True, therefore can be used in While loop, as **While [1,3]:** 
+when the list is empty, then the loop breaks.
  
