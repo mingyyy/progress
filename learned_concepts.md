@@ -258,4 +258,13 @@ ctrl t + rename: to rename all the variables in the file
 10. membership operators: in / not in
 
 
-    
+### Tuesday
+**eval()** is used to transfer the string to a variable!
+strings starts with "_" is for private functions. so don't use it!
+
+1. Dictionary
+- why do we need a dictionary?
+from a key to a value, quick look for something. A key has to be *unique* and of a *mutable* data type. So a list can't be a key. it's normally not ordered. can't have multiple value for one key. value can be another dictionary, any other immutable data structure. a value can't be empty.
+
+search from key to value, but the other way around. value is not unique.
+ 
