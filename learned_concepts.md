@@ -274,8 +274,39 @@ three methods:
 2. .values()
 3. .items()
 
+**There is no __name__ in dictionary, therefore not easy to find the name of a dictionary
+dir() shows the names in strings in the namespace. Therefore can be used to find the name of the dictionaries in string.
+
+
 3. While loop: Indefinite iteration 
 
 if a list is not empty it is True, therefore can be used in While loop, as **While [1,3]:** 
 when the list is empty, then the loop breaks.
+
+use a flag to indicate
+```flag = True
+ while flag:
+     ...
+```
+
+use a counter
+``` counter = 1
+    while counter <= 10:
+        ...
+        counter += 1
+```
+
+use a condition, e.g. when user input an "x", the while loop will stop
+```
+while input_user != "x":
+  input_user = input("")
+```
+
+use *break* to jump out of a while loop
+use *continue* to ignore what's after and go back to the loop to start again
+
+
+
+     
+     
  
