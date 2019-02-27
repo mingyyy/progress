@@ -314,6 +314,7 @@ use *continue* to ignore what's after and go back to the loop to start again
 3. if you just key in the name of the function, nothing happens becuase it's a defined function.
 4. functionname.__call__() is functionname()
 
+```
 def my_func(parameters):
 
   '''docstring'''
@@ -321,6 +322,7 @@ def my_func(parameters):
   something here
   
   return ....
+```
 
 
 
