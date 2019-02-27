@@ -306,19 +306,21 @@ use *break* to jump out of a while loop
 use *continue* to ignore what's after and go back to the loop to start again
 
 
-###Wednesday
-####Function
+### Wednesday
+#### Function
 
 1. if there is no *Return statement*, there will be a default "None"
 2. if a variable is defined inside a function and not returned, it can't be used outside. 
 3. if you just key in the name of the function, nothing happens becuase it's a defined function.
 4. functionname.__call__() is functionname()
 
-**def my_func(parameters):
+def my_func(parameters):
 
-  # docstring
+  '''docstring'''
   
   something here
+  
+  return ....
 
 
 
