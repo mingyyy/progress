@@ -306,6 +306,12 @@ use *break* to jump out of a while loop
 use *continue* to ignore what's after and go back to the loop to start again
 
 
+###Wednesday
+1. function
+1). if there is no *Return statement*, there will be a default "None"
+2). if a variable is defined inside a function and not returned, it can't be used outside. 
+
+
 
      
      
