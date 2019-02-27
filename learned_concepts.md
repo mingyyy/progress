@@ -315,14 +315,19 @@ use *continue* to ignore what's after and go back to the loop to start again
 4. functionname.__call__() is functionname()
 
 ```
-def my_func(parameters):
+def my_func(parameter1, parameter2, etc):
 
-  '''docstring'''
+    '''docstring'''
   
-  something here
+    something here
   
-  return ....
+    return ....
 ```
+parameter1 and parameter2 are positional argument
+*args: a list with unknown length. also an optional arguments (* means create a list and collect key words)
+**kwargs: a dictionary with unknown length. (** means create a dictionary and collect keywords)
+There is a fixed way to pass the keywords arguments, key can't be expressions!
+
 
 
 
