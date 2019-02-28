@@ -335,9 +335,12 @@ an empty list: l = [] has the value [], but bool(l) = False
 **from** module_name **import** function_name **any name
 
 
-###Thursday
+### Thursday
 OOP: object oriented programming
+Attributes = qualities of a class, what it has.
+Methods = how it behaves.
 
+Normally a name of a class is started with a capital letter. 
 
 
      
