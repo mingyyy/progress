@@ -328,6 +328,15 @@ parameter1 and parameter2 are positional argument
 **kwargs: a dictionary with unknown length. (** means create a dictionary and collect keywords)
 There is a fixed way to pass the keywords arguments, key can't be expressions!
 
+Recurssive. 
+
+an empty list: l = [] has the value [], but bool(l) = False
+
+**from** module_name **import** function_name **any name
+
+
+###Thursday
+OOP: object oriented programming
 
 
 
