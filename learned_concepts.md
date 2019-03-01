@@ -332,7 +332,7 @@ Recurssive.
 
 an empty list: l = [] has the value [], but bool(l) = False
 
-**from** module_name **import** function_name **any name
+**from** module_name **import** function_name/class_name **any name
 
 
 ### Thursday
@@ -341,8 +341,58 @@ Attributes = qualities of a class, what it has.
 Methods = how it behaves.
 
 Normally a name of a class is started with a capital letter. 
+**ANKI: revisit the subjects(space repetition) - flash cards
+e.g. what's a method?
+
+Module is a file with some code *.py 
+For example: modules: random, math, time etc, are part of a standard library
+
+1. dunder method. "__init__" takes the first argument "self" refers to the instance itself.
+2. dot
+
+__init__ method, set up the instances for the class itself. Hence, using self.attribute = attribute
+In other methods, the user input should just be a user input.
+
+### Friday
+
+1. as soon as a subclass inherit from a super class. The instances of the superclass are available immediately. 
+however as soon as an __init__ shows up in a sub class, it over-write the __init__ in superclass.
+
+Therefore, any method in subclass with the same name of the method in superclass will over-write the method in superclass.
+
+2. if a class A is using another class B, then to make sure A is working properly, we need to properly define/import class A
+
+3. __repr__ is the representing what the class does
+
+4.*Aliasing* 
+```
+a = 1
+b = a
+b is a
+```
+This will return True. just referencing a, so changing b will change a as well. 
+
+*shallow copy*: use class copy
+```
+a = [[0,1], [2,3]]
+b = copy.copy(a)
+a is b
+```
+This will return: False. a and b are stored in different places in memory.
+
+If a was created by using another variable c = [0,1,2,3]; therefore changing c would change both a and b.
+list.copy is a shollow copy as well
+
+*DEEP copy*: for mutalbe objects
+```
+a = [[0,1], [2,3]]
+b = copy.deepcopy(a)
+a is b
+```
+The computer will just make the value of the a and b, cutting off the links to the previous objects. 
+
+? making the class immutable
 
 
-     
      
  
