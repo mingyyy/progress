@@ -364,7 +364,8 @@ Therefore, any method in subclass with the same name of the method in superclass
 
 3. __repr__ is the representing what the class does
 
-4.*Aliasing* 
+4.Comparing differen ways of copies.
+*Aliasing* 
 ```
 a = 1
 b = a
