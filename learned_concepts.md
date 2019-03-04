@@ -406,5 +406,7 @@ r = read, a = append, w = write
 2. error handler: exceptions
 ```raise Exception("your message here for the error!")
 ```
-
+3. 
+Successful situation: try -> else -> finally
+Unsuccessful situation: try -> except -> finally
  
