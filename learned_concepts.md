@@ -395,5 +395,16 @@ The computer will just make the value of the a and b, cutting off the links to t
 ? making the class immutable
 
 
-     
+## Week 3
+### Monday
+1. file O/I
+``` with open("file.txt", "r") as f:
+        x = f.read
+```
+r = read, a = append, w = write
+
+2. error handler: exceptions
+```raise Exception("your message here for the error!")
+```
+
  
