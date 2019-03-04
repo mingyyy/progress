@@ -410,3 +410,4 @@ r = read, a = append, w = write
 Successful situation: try -> else -> finally
 Unsuccessful situation: try -> except -> finally
  
+4. step into the function: *Command + B
