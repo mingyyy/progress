@@ -469,3 +469,11 @@ Pdb: adding ```breakpoint()```into .py files
 Then look at the debugging.py file
 ```$ python debugging.py```
 
+common command line for pdb:
+short	| long  | description
+n	    | next  | executes the current line of code
+s	    | step  | step inside of the function that is called on the current line
+r	    | return|	execute until the current function's return statement
+p	    | print |	print the variable's value
+!     | <expr>|	execute python statements - acts just like a normal interpreter session
+q	    | quit	| exit the python debugger
