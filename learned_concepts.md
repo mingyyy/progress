@@ -454,7 +454,9 @@ TDD: Test Driven Development
 Unit Test: similiar in Java, JavaScript ...
 
 1. define a test file name it: "test_<filename>.py"
-2. in test_<filename>.py file, import unittest, import <filename>
+2. in test_<filename>.py file, 
+  ```import unittest
+     import <filename>```
 3. ```class Test<Filename>(unittest.TestCase):```
 4. def different test cases and write very descriptive names for each test cases, with (self).
 5. use self.assertxxxxxxxxx to test what you intend to test.
