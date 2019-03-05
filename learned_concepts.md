@@ -470,10 +470,10 @@ Then look at the debugging.py file
 ```$ python debugging.py```
 
 common command line for pdb:
-short	| long  | description
-n	    | next  | executes the current line of code
-s	    | step  | step inside of the function that is called on the current line
-r	    | return|	execute until the current function's return statement
-p	    | print |	print the variable's value
-!     | <expr>|	execute python statements - acts just like a normal interpreter session
-q	    | quit	| exit the python debugger
+    short	| long  | description
+1. n	    | next  | executes the current line of code
+2. s	    | step  | step inside of the function that is called on the current line
+3. r	    | return|	execute until the current function's return statement
+4. p	    | print |	print the variable's value
+5. !<expr>|	      | execute python statements - acts just like a normal interpreter session
+6. q	    | quit	| exit the python debugger
