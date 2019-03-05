@@ -464,3 +464,8 @@ Unit Test: similiar in Java, JavaScript ...
 
 ```def setUp(self):``` set up something before every tests
 ```def tearDown(self):``` tear down something after every tests.
+
+Pdb: adding ```breakpoint()```into .py files
+Then look at the debugging.py file
+```$ python debugging.py```
+
