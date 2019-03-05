@@ -441,3 +441,21 @@ You can use pickle to store non-strings in a database
 Most operating systems provide a command-line interface, also known as a **shell**. Shells usually provide commands to navigate the file system and launch applications. Any program that you can launch from the shell can also be launched from Python using a **pipe object**, which represents a running program.
 
 
+**Mark Directory as Source Root** solves the problem of importing
+
+### Tuesday
+Testing
+
+TDD: Test Driven Development
+1. Pseudocode
+2. Write Tests
+3. Write codes
+
+Unit Test: similiar in Java, JavaScript ...
+
+1. define a test file name it: "test_<filename>.py"
+2. import the filename.py
+3. in test_filename.py file, import unittest, import filename
+4. ```class TestText(unittest.TestCase):```
+5. def different test cases and write very descriptive names for each test cases.
+   
