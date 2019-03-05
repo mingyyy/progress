@@ -401,7 +401,7 @@ The computer will just make the value of the a and b, cutting off the links to t
 ``` with open("file.txt", "r") as f:
         x = f.read
 ```
-r = read, a = append, w = write
+r = read, a = append, w = write, + = read and write, b = binary, x = creat a new file and open it for writing
 
 2. error handler: exceptions
 ```raise Exception("your message here for the error!")
@@ -411,3 +411,33 @@ Successful situation: try -> else -> finally
 Unsuccessful situation: try -> except -> finally
  
 4. step into the function: *Command + B
+
+5. import os (os stands for operating system)
+- *os.getcwd()* returns the name of the current directory. cwd stands for “current working directory”.
+- *os.path.abspath()* To find the absolute path to a file
+- *os.path.exists()* checks whether a file or directory exists
+- *os.path.isdir()* checks whether it’s a directory
+- *os.path.isfile()* checks whether it’s a file
+- *os.listdir(cwd)* returns a list of the files (and other directories) in the current directory
+- *os.path.join* takes a directory and a file name and joins them into a complete path
+
+6.The module **dbm** provides an interface for creating and updating database files.
+```
+import dbm
+db = dbm.open('captions', 'c')
+```
+A limitation of dbm is that the keys and values have to be strings or bytes. If you try to use any other type, you get an error.
+
+7. The **pickle** module can help. It translates almost any type of object into a string suitable for storage in a database, and then translates strings back into objects.
+- pickle.dumps takes an object as a parameter and returns a string representation (dumps is short for “dump string”)
+- pickle.loads (“load string”) reconstitutes the object
+
+pickling and then unpickling has the same effect as copying the object
+
+You can use pickle to store non-strings in a database
+
+8. Pipes
+
+Most operating systems provide a command-line interface, also known as a **shell**. Shells usually provide commands to navigate the file system and launch applications. Any program that you can launch from the shell can also be launched from Python using a **pipe object**, which represents a running program.
+
+
