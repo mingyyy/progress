@@ -461,3 +461,6 @@ Unit Test: similiar in Java, JavaScript ...
 6. run directly from the terminal command line: ```$ python -m unittest``` this runs ALL the unit test cases!
    
 **main + tab** will produce ```if __name__ == '__main__': ```
+
+```def setUp(self):``` set up something before every tests
+```def tearDown(self):``` tear down something after every tests.
