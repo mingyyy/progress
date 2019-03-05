@@ -458,6 +458,6 @@ Unit Test: similiar in Java, JavaScript ...
 3. ```class Test<Filename>(unittest.TestCase):```
 4. def different test cases and write very descriptive names for each test cases, with (self).
 5. use self.assertxxxxxxxxx to test what you intend to test.
-6. run directly from the terminal command line: python -m unittest
+6. run directly from the terminal command line: ```python -m unittest``` this runs ALL the unit test cases!
    
 **main + tab** will produce ```if __name__ == '__main__': ```
