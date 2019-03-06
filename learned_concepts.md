@@ -483,3 +483,18 @@ common command line for pdb:
 4. p	    | print |	print the variable's value
 5. !<expr>|	      | execute python statements - acts just like a normal interpreter session
 6. q	    | quit	| exit the python debugger
+  
+  
+### Wednesday
+Virtual Environtment
+```
+python3 --version
+python3 -m venv <user_name>
+.env cd bin
+bin 1
+cd ../..
+```
+
+alt + space: shows the photo in the folder
+source .env/bin/activate
+deactivate
