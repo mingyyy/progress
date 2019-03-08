@@ -493,6 +493,7 @@ python3 -m venv <user_name>
 .env cd bin
 bin 1
 cd ../..
+pip freeze -l > requirements.txt 
 ```
 
 alt + space: shows the photo in the folder
