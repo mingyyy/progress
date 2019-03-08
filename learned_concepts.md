@@ -499,3 +499,10 @@ pip freeze -l > requirements.txt
 alt + space: shows the photo in the folder
 source .env/bin/activate
 deactivate
+
+### Friday
+1. enumerate
+ctrl + g:  multi-select by clicking going to next variables.
+2. list comprehension
+3. generators
+4. lambdas: can't print or raise in a lambda.
