@@ -564,9 +564,14 @@ Output
 ```
 3. generators
 
-4. lambdas: can't print or raise in a lambda.
-Lambda expressions can be especially useful when they represent the input to another function. Good examples are python's *filter()*, *map()* and *reduce()*
+4. lambdas: lambda is the key word not the name of the funciton. 
+lambda x, x1, x2... xn : f(x, x1, x2, x3... xn)
+
+can't print or raise in a lambda.
+Lambda expressions can be especially useful when they represent the input to another function. Good examples are python's *filter()*, *map()*, and *reduce()*
+sort(key = lambda x: ...)
 Note: A change in Python 3 makes  filter(), map() and reduce() return Generators instead of list objects.Thereforew, we need to explicitly convert it into a *list.
+
 
 
 
