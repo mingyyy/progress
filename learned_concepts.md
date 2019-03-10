@@ -44,7 +44,11 @@ $ cp <file_name> <file_name2>
 
 $ rm -rf <folder_name>
 
-*to delete a file permenantly*
+*to delete an empty folder *
+
+$ rmdir <folder_name>
+
+*to delete a file *
 
 $ rm <file_name>
 
@@ -92,7 +96,6 @@ $ bash <file_name>
 *so a file that is rwx = 7, rx = 5, x = 1, r = 4(read only)...concept of binary*
 
 
-
 **2. Git & GitHub**
 
 $ git init
@@ -102,6 +105,8 @@ $ git status
 $ git remote add origin http://.... (origin could be any name)
 
 $ git remote -v
+
+$ git branch -v
 
 $ git push -u <remote_name> <branch_name> (origin master)
 
@@ -154,6 +159,7 @@ PyCharm: *have project structure, python consol, terminal and others
 3. alt + select same words in different lines, then all these can be changed
 4. ctrl + shift + r, first time to run the program
 5. ctrl + r, aftr running for the first time
+6. command + b, check definition (docstring)
 
 ### Thursday
 1. chapter2 of the book, Variables and types
@@ -182,7 +188,7 @@ print(argument)- a function apply to any type, normally
 
 **iterables (if you can call for loop on it)**
 1. list: same or different data type. 
-2. range() is a class which is predefined.
+2. range() is a class which is pre-defined. also a generator which creates a list of numbers on the fly. 
 3. string
 4. generator: creats each itme on the go. don't need memory. 
 
@@ -191,6 +197,7 @@ print(argument)- a function apply to any type, normally
 2. mutable, while tuples are not.
 3. function sorted(mylist, reverse = True) which return the sorted list
 4. method mylist.sort() returns nothing, however sorted permenantly
+5. index starts from 0
 
 **Loop**
 1. definite: 
@@ -205,7 +212,7 @@ $ chsh *change shell
 $ git remote add <name of the remote> <http://....>  
   *each remote (repository on github) has many branches and a master branch
 
-$ gst (git status)
+$ gst (in zshell = git status)
 
 we can put what we don't need ot push to github in *.gitignore file
 
@@ -486,7 +493,7 @@ common command line for pdb:
   
   
 ### Wednesday
-Virtual Environtment
+1. Virtual Environtment
 ```
 python3 --version
 python3 -m venv <user_name>
@@ -500,9 +507,67 @@ alt + space: shows the photo in the folder
 source .env/bin/activate
 deactivate
 
+This will give you a list of all the current environment variables present on your system. 
+```printenv. ```
+
+You can check out the variables' individual values using 
+```echo $<VARNAME>```
+
+You can add a new environment variable with the following command:
+```export <NAME>=<VALUE>```
+Attention: There should be no space on either side of the = sign!
+
+Removing environment:
+```unset <NAME>```
+
+To use an environment inside Python, import the os libarary.
+```
+import os
+secret = os.environ['MY_SUPER_SECRET_SECRET']
+print(secret)
+```
+
+to make sure new VEVs(Virtual Environment Variables)are not stick arount. This code gets run everytime we deactivate our environment
+```
+deactivate () {
+     unset MY_SUPER_SECRET_SECRET
+     # lots of other code
+}
+```
+2. Packages
+```pip install <package name>
+pip3 install <package name>
+```
+
+
+
+
 ### Friday
-1. enumerate
+
+*aggregators aggregate values within the function body, and return an aggregate value.e.g. sum of some numbers.
+enumerate is an example of an aggregator.
+
+1. A python in-built function .enumerate()
+```enumerate(iterable, start=0)```
+The enumerate() method adds counter to an iterable and returns it. The returned object is a enumerate object.
+
 ctrl + g:  multi-select by clicking going to next variables.
 2. list comprehension
+replicate nested if statements with a list comprehension. check first if and then second if.
+Nested loops can be used to perform multiple iterations in a lsit comprehension
+```
+my_list = [x * y for x in [20, 40, 60] for y in [2, 4, 6]]
+print(my_list)
+
+Output
+[40, 80, 120, 80, 160, 240, 120, 240, 360]
+```
 3. generators
+
 4. lambdas: can't print or raise in a lambda.
+Lambda expressions can be especially useful when they represent the input to another function. Good examples are python's *filter()*, *map()* and *reduce()*
+Note: A change in Python 3 makes  filter(), map() and reduce() return Generators instead of list objects.Thereforew, we need to explicitly convert it into a *list.
+
+
+
+
