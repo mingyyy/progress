@@ -572,7 +572,37 @@ Lambda expressions can be especially useful when they represent the input to ano
 sort(key = lambda x: ...)
 Note: A change in Python 3 makes  filter(), map() and reduce() return Generators instead of list objects.Thereforew, we need to explicitly convert it into a *list.
 
+## Week4
+### Monday
+1. HTML:Hypertext(links) markup language, just a markup language rather than a programing language.
+<div>....</div>
+elements with opening and close tag:
+<h1>My First Heading</h1>
+boxes inside boxes:
+```
+<html>
+  <body>
+     <nevigation bar>
+        <h1>My First Heading</h1>
+     </nevigation bar>
+     <section>
+       <> </>
+     </section>
+     
+  <body>
+</html>
+```
 
+HTML basic tags
+head:
+body: only what's here will be displayed on the page
+headings from h1 to h6 (smaller)
+p: paragraph
+a: link
+div:division, a generic box
+section:
+table:
 
+**different ways of establishing a connnection between user and server: webhooks, API, uscr
 
 
