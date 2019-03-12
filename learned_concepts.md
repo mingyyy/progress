@@ -593,7 +593,8 @@ boxes inside boxes:
 </html>
 ```
 
-HTML basic tags
+**HTML basic tags
+
 head:
 body: only what's here will be displayed on the page
 headings from h1 to h6 (smaller)
@@ -605,4 +606,82 @@ table:
 
 **different ways of establishing a connnection between user and server: webhooks, API, uscr
 
+1. All HTML elements can have attributes
+2. The *title* attribute provides additional "tool-tip" information
+3. The *href* attribute provides address information for links
+4. The *width* and *height* attributes provide size information for images
+5. The *alt* attribute provides text for screen readers
+6. The *<hr>* tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+7. With HTML, you cannot change the output by adding extra spaces or extra lines in your HTML code. The browser will remove any extra spaces and extra lines when the page is displayed:
+8. Use *<br>* if you want a line break (a new line) without starting a new paragraph
+9. The HTML *<pre>* element defines preformatted text. The text inside a *<pre>* element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks
+10. syntax for *style*: <tagname style="property:value;">
+
+text formatting
+```
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Small text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+```
+
+1. <q>
+2. <blockquote>
+3. The HTML <abbr> element defines an abbreviation or an acronym.
+4. The HTML <address> element defines contact information (author/owner) of a document or an article.
+The <address> element is usually displayed in italic. Most browsers will add a line break before and after the element.
+5. The HTML <cite> element defines the title of a work. Browsers usually display <cite> elements in italic.
+6. <bdo dir="rtl"> </bdo> overwrites the current text direction.
+7. adding coments <!-- Write your comments here --> 
+8. In HTML, a color can be specified as an RGB value, using this formula: rgb(red, green, blue)
+
+### Tuesday
+CSS stands for Cascading Style Sheets.
+
+The target attribute specifies where to open the linked document.
+
+The target attribute can have one of the following values:
+
+_blank - Opens the linked document in a new window or tab
+_self - Opens the linked document in the same window/tab as it was clicked (this is default)
+_parent - Opens the linked document in the parent frame
+_top - Opens the linked document in the full body of the window
+framename - Opens the linked document in a named frame
+
+Create a Bookmark
+
+First, create a bookmark with the id attribute
+```<h2 id="C4">Chapter 4</h2>```
+Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:
+```<a href="#C4">Jump to Chapter 4</a>```
+
+The <map> tag defines an image-map. An image-map is an image with clickable areas.
+  
+Block level elements in HTML:
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
+
+Inline elements in HTML:
+An inline element does not start on a new line and only takes up as much width as necessary.
+<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+  
+The <div> element is often used as a container for other HTML elements.
+The <div> element has no required attributes, but style, class and id are common.
+  
+The <span> element is often used as a container for some text.
+The <span> element has no required attributes, but style, class and id are common.
+  
+**Using The class Attribute**
+The HTML class attribute is used to define equal styles for elements with the same class name.
+So, all HTML elements with the same class attribute will have the same format and style.
+
+**difference between class and id
+
+An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements
 
