@@ -574,24 +574,31 @@ Note: A change in Python 3 makes  filter(), map() and reduce() return Generators
 
 ## Week4
 ### Monday
+
 1. HTML:Hypertext(links) markup language, just a markup language rather than a programing language.
 <div>....</div>
 elements with opening and close tags and content:
-<h1>My First Heading</h1>
+6 headings in total from h1 to h6, e.g. <h1>My First Heading</h1>
 boxes inside boxes:
+
 ```
+<!DOCTYPE html>
 <html>
+ <head> <title> this is my site </title> 
+        <style> ....<style>
+ </head>
   <body>
      <nevigation bar>
-        <h1>My First Heading</h1>
+     <h1>My First Heading</h1>
      </nevigation bar>
      <section>
-       <> </>
+       <a href="http://codingnomads.co">codingnomads </>
      </section>
-     
   <body>
 </html>
 ```
+short-hand to type unordered list of 4 lists (use **emmet)
+```ul>li*4 tab```
 
 **HTML basic tags
 
@@ -641,7 +648,7 @@ The <address> element is usually displayed in italic. Most browsers will add a l
 7. adding coments <!-- Write your comments here --> 
 8. In HTML, a color can be specified as an RGB value, using this formula: rgb(red, green, blue)
 
-### Tuesday
+
 CSS stands for Cascading Style Sheets.
 
 The target attribute specifies where to open the linked document.
@@ -684,4 +691,10 @@ So, all HTML elements with the same class attribute will have the same format an
 **difference between class and id
 
 An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements
+
+### Tuesday
+CSS and HTML are languages but not a programing language
+bootstrap is a framework in CSS.
+
+bootstrap(https://getbootstrap.com/docs/4.3/getting-started/download/)
 
