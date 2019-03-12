@@ -576,7 +576,7 @@ Note: A change in Python 3 makes  filter(), map() and reduce() return Generators
 ### Monday
 1. HTML:Hypertext(links) markup language, just a markup language rather than a programing language.
 <div>....</div>
-elements with opening and close tag:
+elements with opening and close tags and content:
 <h1>My First Heading</h1>
 boxes inside boxes:
 ```
