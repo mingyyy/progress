@@ -697,7 +697,9 @@ An HTML element can only have one unique id that belongs to that single element,
 CSS and HTML are languages but not a programing language
 bootstrap is a framework in CSS.
 
-bootstrap(https://getbootstrap.com/docs/4.3/getting-started/download/)
+bootstrap(https://getbootstrap.com/docs/4.3/getting-started/download/) 
+1.mobile-first responsive design
+2.easy styling
 
 some elements don't have closing tag: link, meta, img
 
