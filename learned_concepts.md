@@ -687,10 +687,11 @@ The <span> element has no required attributes, but style, class and id are commo
 **Using The class Attribute**
 The HTML class attribute is used to define equal styles for elements with the same class name.
 So, all HTML elements with the same class attribute will have the same format and style.
+**classname has no space, if there is space, class is taking in multiple classes. if in conflict the last one will prevail. becuase of cascading.**
 
 **difference between class and id
 
-An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements
+An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements.
 
 ### Tuesday
 CSS and HTML are languages but not a programing language
@@ -698,3 +699,29 @@ bootstrap is a framework in CSS.
 
 bootstrap(https://getbootstrap.com/docs/4.3/getting-started/download/)
 
+some elements don't have closing tag: link, meta, img
+
+To link a style.css: <link rel="stylesheet" href="style.css"> in side of <head> </head>
+
+In CSS: start with a selector, followed by { } in side which property: value;
+``` p{
+       color:red;
+}
+
+.highlight{color:red;
+}
+
+hightlight > p {color:red;
+}
+```
+address all the p child element in highlight class
+
+Grid System Rules in Bootstrap:
+
+Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding
+Use rows to create horizontal groups of columns
+Content should be placed within columns, and only columns may be immediate children of rows
+Predefined classes like .row and .col-sm-4 are available for quickly making grid layouts
+Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows
+Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three equal columns would use three .col-sm-4
+Column widths are in percentage, so they are always fluid and sized relative to their parent element
