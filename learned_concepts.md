@@ -727,3 +727,20 @@ Predefined classes like .row and .col-sm-4 are available for quickly making grid
 Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows
 Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three equal columns would use three .col-sm-4
 Column widths are in percentage, so they are always fluid and sized relative to their parent element
+
+### Wednesday
+
+in firefox type: ```file:/// localhost/ = 127.0.0.1``` will direct to root directory
+URL: Uniform Resource Locator
+file://127.0.0.0 or 127.0.0.1
+http:// hyper text transfer protocol
+ftp:// 
+domain name(address of the computer, the server you are connected to): e.g. www.google.com
+then a path like "/home" for example is walking through a file system
+
+***protocol://domain_name/path***
+
+DNS: domain name system translate the name of the computer to an IP address (long numbers)
+
+ ```ping www.wikipedia.org```
+www.wikipedia.org (103.102.166.224): 56 data bytes
