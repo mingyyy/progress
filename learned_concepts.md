@@ -765,3 +765,8 @@ In computer programming, an application programming interface is a set of subrou
 from the website itself, a structured way to directly access the data. 
 providing a interface with HTTP methods. 
 REST is one of the standards, frame work that post some constraints
+
+1.find API
+2. read the docs
+3. integrate with other script
+
