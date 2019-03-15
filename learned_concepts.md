@@ -744,3 +744,24 @@ DNS: domain name system translate the name of the computer to an IP address (lon
 
  ```ping www.wikipedia.org```
 www.wikipedia.org (103.102.166.224): 56 data bytes
+
+
+### Thursday
+web scraping: download webpages
+web crawling: going through links automatically
+web parsing: after scraping, taking out info needed
+
+4 common HTTP methods:
+.get() : asking for something
+.post() : handing over something and asking for something
+.delete : get rid of something from the server
+.put : editing things on the server (update)
+
+
+### Friday
+API: application programing interfaace.
+In computer programming, an application programming interface is a set of subroutine definitions, communication protocols, and tools for building software.
+
+from the website itself, a structured way to directly access the data. 
+providing a interface with HTTP methods. 
+REST is one of the standards, frame work that post some constraints
