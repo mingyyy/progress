@@ -770,3 +770,29 @@ REST is one of the standards, frame work that post some constraints
 2. read the docs
 3. integrate with other script
 
+
+## week 5
+### Monday
+Exam:
+1. Web URL load a HTML file while API URL resource holding data: json, txt, ml
+2. get post put delete
+3. post is creating a resource
+put is overwriting and changing things
+4. map to common db actions to HTTP methods
+post - create 
+get - read 
+put - update 
+delete - delete 
+5. always read the doc of the API.
+6. ? starts a query, & separate the parameters, parameter = value
+
+APIs
+DB 
+- SQL Alchemy (interact with database from python)
+- SQL (Postgres)
+- server (go to different places)
+
+Slack API
+
+
+
