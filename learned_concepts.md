@@ -793,6 +793,55 @@ DB
 - server (go to different places)
 
 Slack API
+1. get token
+2. pip install slackclient
+3. from slackclient import SlackClient
+4. sc = SlackClinet(token)
+5. calling methods to retrieve info: sc.api_call()
+
+### Wednesday
+SQL & RDBMS (i.e. MS Access, SQL Server, MySQL)
+relational database Vs. non-relational database(mongoDB)
+1. clear table structure Vs. documents
+2. primary key
+
+query return a result set. 
+syntax
+```
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+DELETE FROM table_name WHERE condition;
+
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+
+DROP TABLE Shippers;
+
+ALTER TABLE table_name
+ADD column_name datatype;
+```
+
+join & conditions
+ ```
+ SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+```
+
+  
+
+
 
 
 
