@@ -839,6 +839,19 @@ GROUP BY column_name(s)
 ORDER BY column_name(s);
 ```
 
+making connection to the postgres DB, which sit on my PC.
+```$ psql``` then we get out by \q 
+```$ psql -U postgres``` look at the user: \du, or \?
+\l: list of all the DB
+\c dvdrental: connecting to a DB called dvdrental.
+\dt: list of tables in the DB
+\q: quit this ps command line
+\?: help with the command line
+
+```dvdrental=# SELECT ...```Inside the DB, we can make sql queries. 
+
+  ### Thursday
+  SQLAlchemy: with SQL database connecting to Python, abstraction layer on top of the DB
   
 
 
