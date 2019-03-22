@@ -853,6 +853,14 @@ making connection to the postgres DB, which sit on my PC.
   ### Thursday
   SQLAlchemy: with SQL database connecting to Python, abstraction layer on top of the DB
   
+  ### Friday
+  sandman2 + postman
+  ```
+  $ pip install sandman2
+  $ sandman2ctl postgresql+psycopg2://Ming@localhost/<db_name>
+  
+  
+  
 
 
 
