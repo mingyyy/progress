@@ -906,6 +906,11 @@ making connection to the postgres DB, which sit on my PC.
  $ python manage.py migrate
  $ python manage.py sqlmigrate logs 0001
  
+ In Django, Meta is just used to pass information into the process of creating the _meta Options object. Django's Model class specifically handles having an attribute named Meta which is a class. It's not a general Python thing.
+ https://docs.djangoproject.com/en/2.1/ref/models/options/
+ 
+ 
+ 
 
  
  
