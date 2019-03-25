@@ -852,6 +852,7 @@ making connection to the postgres DB, which sit on my PC.
 
   ### Thursday
   SQLAlchemy: with SQL database connecting to Python, abstraction layer on top of the DB
+  postgres: varchar, serial, decimal
   
   ### Friday
   sandman2 + postman
@@ -870,15 +871,50 @@ making connection to the postgres DB, which sit on my PC.
   Mostly a backend frame work, make things run on the server-side; while front end run on the client-side.
   Lots of display related to FE. 
  
+ Building different logics in different apps under one project. 
+ 
+ What do we want to do with LEARNING LOGS:
+ 1. log learning progress
+ 2. for multiple topics
+ 3. multiple entries for each topic
+ 
+ Tbl1. Topics: id(primary key), topic, descr, date_added, 
+ Tbl2. Entries: id(primary key), id_topic(foregin key), text, date_added
+ 
  db.sqlites3 is just a tile not an entire database.
  
  1. create a new project (venv)
  2. $ pip install djangp
  3. create a requirements file: $ pip freeze > requirements.txt
  4. create a project in the current folder: $ django-admin startproject learning_log .
- 5. $ 
+ 5. hide secrets.py in .gitignore
+ 6. put inside .gitigore: 
+ secrets.py
+ venv
+ .idea
+ 7. create the database file which holds the default files: $ python manage.py migrate
+ 8. simulate another server to connect with our computer: $ python manage.py runserver
+ 9. create a superuser: $ python manage.py createsuperuser
+ 10. now we can into our website to login as superuser: http://127.0.0.1:8000/admin/
+ 11. Create a README.md file
+ 12. git init / git commit -m "initial commit to create learning_log"
+ 13. create a logs folder (a django app): $ python manage.py startapp logs
+ 14. create new classes in models.py, inheritates from models.MOdel
+ 15. add ```"logs",``` inside INSTALLED_APPS under settings.py
+ 16.
+ $ python manage.py makemigrations
+ $ python manage.py migrate
+ $ python manage.py sqlmigrate logs 0001
+ 
+
+ 
+ 
+ 
+
+
   
   
+ 
   
 
 
