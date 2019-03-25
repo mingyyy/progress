@@ -858,6 +858,25 @@ making connection to the postgres DB, which sit on my PC.
   ```
   $ pip install sandman2
   $ sandman2ctl postgresql+psycopg2://Ming@localhost/<db_name>
+  ```
+  
+  ## Week 6
+  ### Monday
+  
+  MVC: model view (HTML, static pages/templates/styles) controler (code logics)
+  *in Django: MTV(model template views) = MVC (model view controler)
+  ORM: object relational mapper
+  
+  Mostly a backend frame work, make things run on the server-side; while front end run on the client-side.
+  Lots of display related to FE. 
+ 
+ db.sqlites3 is just a tile not an entire database.
+ 
+ 1. create a new project (venv)
+ 2. $ pip install djangp
+ 3. create a requirements file: $ pip freeze > requirements.txt
+ 4. create a project in the current folder: $ django-admin startproject learning_log .
+ 5. $ 
   
   
   
