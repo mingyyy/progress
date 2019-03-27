@@ -672,11 +672,12 @@ The <map> tag defines an image-map. An image-map is an image with clickable area
   
 Block level elements in HTML:
 A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
-<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
+```<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>```
 
 Inline elements in HTML:
+
 An inline element does not start on a new line and only takes up as much width as necessary.
-<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+```<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>```
   
 The <div> element is often used as a container for other HTML elements.
 The <div> element has no required attributes, but style, class and id are common.
@@ -871,7 +872,7 @@ making connection to the postgres DB, which sit on my PC.
   Mostly a backend frame work, make things run on the server-side; while front end run on the client-side.
   Lots of display related to FE. 
  
- Building different logics in different apps under one project. 
+ Building different logics in different apps under one project. One project could have many apps.
  
  What do we want to do with LEARNING LOGS:
  1. log learning progress
@@ -883,10 +884,10 @@ making connection to the postgres DB, which sit on my PC.
  
  db.sqlites3 is just a tile not an entire database.
  
- 1. create a new project (venv)
- 2. $ pip install djangp
+ 1. create a new project $mkdir learning_log and a virtual environment: $ python3 -m venv .env then activate it
+ 2. install Django package. $ pip install Django 
  3. create a requirements file: $ pip freeze > requirements.txt
- 4. create a project in the current folder: $ django-admin startproject learning_log .
+ 4. create a project in the current folder: $ django-admin startproject learning_log . (don't forget the dot in the end)
  5. hide secrets.py in .gitignore
  6. put inside .gitigore: 
  secrets.py
@@ -895,19 +896,59 @@ making connection to the postgres DB, which sit on my PC.
  7. create the database file which holds the default files: $ python manage.py migrate
  8. simulate another server to connect with our computer: $ python manage.py runserver
  9. create a superuser: $ python manage.py createsuperuser
- 10. now we can into our website to login as superuser: http://127.0.0.1:8000/admin/
+ 10. now we can go into our website to login as superuser: http://127.0.0.1:8000/admin/
  11. Create a README.md file
  12. git init / git commit -m "initial commit to create learning_log"
  13. create a logs folder (a django app): $ python manage.py startapp logs
- 14. create new classes in models.py, inheritates from models.MOdel
+ 14. create new classes in models.py, inheritates from models.Model
+ ```
+ class Post(models.Model):
+      title = models.Charfield(max_length=200)
+      text = models.Text()
+      author = models.Charfield(max_length=100)
+      date_added = models.DateTimeField(auto_now_add=True)
+      
+      def __str__(self):
+          return self.title
+ ```
+      
  15. add ```"logs",``` inside INSTALLED_APPS under settings.py
  16.
+ model.py go through makemigrations to create a file in migration folder: _itin_0001. (like a commit in github)
  $ python manage.py makemigrations
+ take 0001 code translate to sql and put it in the database
  $ python manage.py migrate
+ check the status of the migrate sql
  $ python manage.py sqlmigrate logs 0001
+ 17. register under admin our new models: admin.site.register(Topic)
  
  In Django, Meta is just used to pass information into the process of creating the _meta Options object. Django's Model class specifically handles having an attribute named Meta which is a class. It's not a general Python thing.
  https://docs.djangoproject.com/en/2.1/ref/models/options/
+ 
+ 
+ enter into Django shell:
+ $ python manage.py shell
+ 
+ $ from logs.models import Topic, Entry
+ $ topics = Topic.objects.all()
+ $ for i in topics:
+ $    print(i)
+ 
+ exit from Django shell:
+ $ exit()
+ 
+ ### Tuesday
+ 1. learning_logs -> urls.py. Currently only have one path "admin/" in the file; list route URLs to views
+ 2. include ("logs/", "logs.urls")
+ 3. path("", views.index)
+ 4. index render()
+ 5. create a template folder inside logs, templates/base.html
+ 6. incoporate some logics
+ 
+ URL => manage urls => app urls => function in views.py => template (html files)
+ 
+ **In the latest version of Django, the default of defining the path is not regular expression anymore. So we need to change in the Django 2.xx if you have an older version.
+ And the on_delete cascade is necessary now, before might not be. 
  
  
  
