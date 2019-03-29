@@ -951,6 +951,34 @@ making connection to the postgres DB, which sit on my PC.
  And the on_delete cascade is necessary now, before might not be. 
  
  
+ ### Wednesday
+ building forms
+ 1. create form.py in my app, define a new form class inheritate form ModelForm
+ 2. add a function in view
+ 3. add urls.py, set up the route for new page
+ 4. add html file
+ 
+ ### JAVA
+ unlike python it is a compile language.
+ 
+ ### Thursday
+ new entry
+ user login/logout
+ 1. if DIRS has logs and users two apps and defined. 
+ 2. therefore, we have to define another folder under each template: e.g. logs/template/logs/base.html
+ so we can call base.html in any app. 
+ 
+ ### Friday
+ Deployment
+ 
+ Heruko Pssa
+ 1). download the heroku client package and install
+ 2). create a free account
+ 3). https://medium.com/@qazi/how-to-deploy-a-django-app-to-heroku-in-2018-the-easy-way-48a528d97f9c
+ 
+ 
+ 
+ 
  
 
  
