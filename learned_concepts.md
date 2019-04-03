@@ -977,6 +977,18 @@ making connection to the postgres DB, which sit on my PC.
  3). https://medium.com/@qazi/how-to-deploy-a-django-app-to-heroku-in-2018-the-easy-way-48a528d97f9c
  
  
+ ## Week7
+ ### Tuesday
+ git branch -b <branch_name>
+ 
+ git branch
+ 
+ git checkout <branch_name>
+ 
+ (master)$git merge <branch_name>
+ this is taking <branch_name> into master branch 
+ 
+ 
  
  
  
