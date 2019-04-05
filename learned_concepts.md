@@ -988,8 +988,20 @@ making connection to the postgres DB, which sit on my PC.
  (master)$git merge <branch_name>
  this is taking <branch_name> into master branch 
  
+ ### Friday
  
- 
+ 1. create folder
+ 2. create a virtual environement: $ python3 -m venv .env
+ 3. activate .env: $ source .env/bin/activate
+ 4. $ git clone https://github.com/martin-martin/django-twitter-clone.git
+ 5. $ cd django-twitter-clone
+ 6. $ pip install -r requirements.txt
+ 7. $ python djitter/manage.py migrate
+ 8. $ cd djitter
+ 9. $ python manage.py makemigrations djeet
+ 10. $ python manage.py makemigrations djeeterprofile
+ 11. $ python manage.py migrate
+ 12. $ python manage.py runserver
  
  
 
