@@ -1077,17 +1077,86 @@ Again, the web app is running...
 
 ~/$ is the root
 /Users/Ming/
+deactivate the virtual environment: $ deactivate
 
+STEP 4.setting up a gunicorn socket files to run our app automatically
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04#creating-systemd-socket-and-service-files-for-gunicorn
 
+Ngnix is listening when someone is visiting the server, tells Gunicorn to run the server.
+(nano is similar to vim)
+**create the socket file**
+$ sudo vim /etc/systemd/system/gunicorn.socket
+This will open the file, now copy the following inside the file:
+[Unit]
+Description=gunicorn socket
 
+[Socket]
+ListenStream=/run/gunicorn.sock
 
+[Install]
+WantedBy=sockets.target
 
+exit vim mode
+
+**create the service file
+$ sudo vim /etc/systemd/system/gunicorn.service**
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=Ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/twitter_proj/django-twitter-clone/djitter
+ExecStart=/home/ubuntu/twitter_proj/django-twitter-clone/env/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          djitter.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+**make changes: 
+1. User=Ubuntu
+2. goto the project folder of the project. $pwd, copy the link after WorkingDirectory
+3. goto the bin where gunicorn is saved. $pwd, copyt the link at ExecStart
+4. before .wsgi save the name of your django project
+5. esc :wq
+
+start and enable the socket:
+$ sudo systemctl start gunicorn.socket
+$ sudo systemctl enable gunicorn.socket
+
+checking on socket status:
+$ sudo systemctl status gunicorn.socket
+
+check for existence of the socket
+$ file /run/gunicorn.sock
+
+wsgi is specific for django, gunicorn does the communication between web server and django
  
- 
 
+$ sudo vim /etc/nginx/sites-available/djitter
+copy this inside
+server {
+    listen 80;
+    server_name server_domain_or_IP;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/sammy/myprojectdir;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
  
- 
- 
+$ sudo ln -s /etc/nginx/sites-available/djitter/etc/nginx/sites-enabled
+$ sudo nginx -t
+
 
 
   
