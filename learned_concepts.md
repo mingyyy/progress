@@ -1009,6 +1009,7 @@ making connection to the postgres DB, which sit on my PC.
  $ git push ming master
 
 STEP 2. 
+
 1. register an account with AWS.
 2. login to AWS management console
 3. Services -> EC2 -> Instances -> Launch Instance -> Ubuntu -> next until Configure Security Group: set Source=My IP
@@ -1027,7 +1028,7 @@ wait for 15 mins
 9. In Terminal: 
 $ deactivate
 $ cd 
-$ l
+$ ls -al
 10. if there is no .ssh folder create  one, then move pem file inside
 $ cd .ssh
 $ mv ../Downloads/ming_bali.pem .  
@@ -1036,7 +1037,48 @@ $ mv ../Downloads/ming_bali.pem .
 $ ssh -i "ming_bali.pem" ubuntu@ec2-34-213-211-97.us-west-2.compute.amazonaws.com
 13. when asked, type: yes
 14. now we are at ubuntu@ip-172-31-24-209:~$
-15. 
+15. security group -> inbound -> edit inbound rules -> click on My IP: it will change to a new IP 
+16. install python, nginx sql curl etc here:
+$ sudo apt-get update
+$ sudo apt-get install python3-pip
+$ sudo apt-get install python3-dev
+$ sudo apt-get install nginx
+$ sudo apt-get install curl
+$ sudo apt-get install libmysqlclient-dev
+$ sudo apt-get install python3-venv
+(sudo = superuser do, which you can only install in superuser level)
+
+STEP 3.
+
+create directory in server: ubuntu@ip-172-31-24-209:~$ mkdir twitter_proj
+$ cd twitter_proj/
+$ git clone https://github.com/mingyyy/django-twitter-clone
+$ cd django-twitter-clone/
+create virtual environment: $ python3 -m venv env
+activate virtual environment: $ source env/bin/activate
+clone from github: $ git clone https://github.com/martin-martin/django-twitter-clone.git
+$ cd django-twitter-clone
+recursive install: $ pip install -r requirements.txt
+$ pip install gunicorn
+Go to setting.py file, change:
+1. DEBUG=False
+2. add one more item in ALLOWED_HOSTS, copy from public IP into this list.
+make migrations for app djeet: $ python manage.py makemigrations djeet
+make migrations for app djeeterprofile: $ python manage.py makemigrations djeeterprofile
+migrate the DB: $ python manage.py migrate
+runserver here command: python manage.py runserver 0.0.0.0:8000
+go to brower find the public ip and add 8000: 
+http://34.213.211.97:8000
+Now it's running....
+
+Then, we close the session: ctrl+c, web is not working after this. 
+Next we test gunicorn to run our server when we are on the session: $ gunicorn --bind 0.0.0.0:8000 djitter.wsgi
+Again, the web app is running...
+
+~/$ is the root
+/Users/Ming/
+
+
 
 
 
