@@ -990,18 +990,56 @@ making connection to the postgres DB, which sit on my PC.
  
  ### Friday
  
+ STEP 1. clone - run locally - push to github
+ 
  1. create folder
  2. create a virtual environement: $ python3 -m venv .env
  3. activate .env: $ source .env/bin/activate
- 4. $ git clone https://github.com/martin-martin/django-twitter-clone.git
+ 4. clone from github: $ git clone https://github.com/martin-martin/django-twitter-clone.git
  5. $ cd django-twitter-clone
  6. $ pip install -r requirements.txt
  7. $ python djitter/manage.py migrate
  8. $ cd djitter
  9. $ python manage.py makemigrations djeet
  10. $ python manage.py makemigrations djeeterprofile
- 11. $ python manage.py migrate
- 12. $ python manage.py runserver
+ 11. migrate the DB: $ python manage.py migrate
+ 12. check if it's running in localhost: $ python manage.py runserver
+ 13. create github repository, and push to github.
+ $ git add /commit/ add remote <your remote name> "github repository link "
+ $ git push ming master
+
+STEP 2. 
+1. register an account with AWS.
+2. login to AWS management console
+3. Services -> EC2 -> Instances -> Launch Instance -> Ubuntu -> next until Configure Security Group: set Source=My IP
+Add one more type: Custom TCP , port range = 8000, anywhere
+Add one more type: HTTP, port range = 80, anywhere
+750hour a month for one instance for free for only one year
+port: 8080 development 8000; 22 secured shell
+4. click: Launch
+5. create new key pair
+6. download the key pem.txt
+
+wait for 15 mins
+
+7. click on View Instances on the right down corner
+8. change the name and click on Connect
+9. In Terminal: 
+$ deactivate
+$ cd 
+$ l
+10. if there is no .ssh folder create  one, then move pem file inside
+$ cd .ssh
+$ mv ../Downloads/ming_bali.pem .  
+11. change security owner read only: $ chmod 400 ming_bali.pem
+12. when you are in .ssh folder, connect to server, based on DNS(domain name server) or server info given by AWS
+$ ssh -i "ming_bali.pem" ubuntu@ec2-34-213-211-97.us-west-2.compute.amazonaws.com
+13. when asked, type: yes
+14. now we are at ubuntu@ip-172-31-24-209:~$
+15. 
+
+
+
  
  
 
