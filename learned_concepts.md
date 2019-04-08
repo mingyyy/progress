@@ -1173,6 +1173,12 @@ $ sudo ln -s /etc/nginx/sites-available/djitter/etc/nginx/sites-enabled
 $ sudo nginx -t
 
 
+## Week 8
+### Lunes
+Setting the psql in the PATH
+
+$ vim ~/.bash_profile
+
 
   
   
