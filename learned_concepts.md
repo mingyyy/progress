@@ -1201,7 +1201,8 @@ $ python manage.py runserver
 
 Now, it is on your postgres DB. Open Admin.
 
-Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 -> Public accessibility: yes; DB options: djitter (IAM: identity access management) => add security group so it can find the link
+Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 -> Public accessibility: yes; DB options: djitter (IAM: identity access management) => click in "security group", add security group so it can find the link; under "inbound"; add another rule(MyIP) 
+
 
 Endpoint
 djitter.col25ju7jeyk.us-west-2.rds.amazonaws.com
