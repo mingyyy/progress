@@ -1195,7 +1195,13 @@ DATABASES = {
     }
 }
 ```
+Go to the right directory and migrate to postgres DB
+$ python manage.py migrate
+$ python manage.py runserver
 
+Now, it is on your postgres DB. Open Admin.
+
+Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 ->
   
   
  
