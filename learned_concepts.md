@@ -655,6 +655,21 @@ The target attribute specifies where to open the linked document.
 
 The target attribute can have one of the following values:
 
+## Week8
+### Lunes
+EC2 instance contains django project + ubantu + sqlite3 (hard to see and share the data)
+RDS(Relational database service) is another tool provided by Amazon, a secured server only for database.
+We need to set up a link between EC2 and RDS(Postgresql / MySQL etc.)
+There is also a non-relational DB tool for Mongo etc...
+
+digital ocean
+
+1. connect local project to local postgresql
+2. create new RDS
+3. Connect local project to remote RDS
+4. Connect local project to EC2 instance...
+5. Remote EC2 connected to remote RDS
+
 _blank - Opens the linked document in a new window or tab
 _self - Opens the linked document in the same window/tab as it was clicked (this is default)
 _parent - Opens the linked document in the parent frame
