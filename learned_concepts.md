@@ -1178,6 +1178,10 @@ $ sudo nginx -t
 Setting the psql in the PATH
 
 $ vim ~/.bash_profile
+$ source ~/.bash_profile
+
+Now you have the psql on the path
+$ which psql
 
 
   
