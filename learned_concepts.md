@@ -1183,6 +1183,18 @@ $ source ~/.bash_profile
 Now you have the psql on the path
 $ which psql
 
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'name of your db',
+        'USER': 'postgres',
+        'PASSWORD': 'password for postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
 
   
   
