@@ -1185,10 +1185,10 @@ $ source ~/.bash_profile
 Now you have the psql on the path
 $ which psql
 
-STEP1. make a json dump to export data from Sqlite3 to a json file
+#### STEP1. make a json dump to export data from Sqlite3 to a json file
 ```$ python3 manage.py dumpdata > datadump.json```
-STEP2. Create a database <db_name>
-STEP3. Change DB in settings.py.
+#### STEP2. Create a database <db_name>
+#### STEP3. Change DB in settings.py.
 from sqlites
 ```
 DATABASES = {
@@ -1218,22 +1218,31 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 
-Now, it is on your postgres DB. Open Admin.
+***NOTE: when I saved the secret_key inside the pycharm terminal; it didn't show up when typing "$ printenv". The problem could be solved by adding the secret_key in .env/bin/activate file
+```
+$ cd .env/bin             
+$ vim activate
+```
+Inside the vim file, "unset SECRET_KEY" at the beginning and then at the end of the file: 
+```export SECRET_KEY="key here" ```
 
-Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 -> Public accessibility: yes; DB options: djitter (IAM: identity access management) => click in "security group", add security group so it can find the link; under "inbound"; add another rule. port rangee: 5432; add the private IP of your EC2 instance, and "/32" in the end which means only available for this one IP address.
+Now, it is on your postgres DB. Open Postgres Admin to check it. 
 
+#### STEP4. Set up RDS
+Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 -> Public accessibility: yes; DB options: djitter (IAM: identity access management) 
 
-Endpoint
-djitter.col25ju7jeyk.us-west-2.rds.amazonaws.com
+#### STEP5. Set up Postgres on RDS
+find the Endpoint under Connectivity & security
+something like this: djitter.col25ju7jeyk.us-west-2.rds.amazonaws.com
 
 In PgAdmin4, adding Server: 
-1. General: add name
-2. Connection: add **endpoint** of the RDS server to Hostname/address, password is the new password we set in RDS
+1. General: add db name defined in AWS
+2. Connection: add **endpoint** of the RDS server to Hostname/address, password is the new password we set in RDS.
 
 Now, we have created a server in our remote server. Click on it and we are connected to the server in RDS.
 
+#### STEP6.  Set the file DB to RDS
 Open settings.py file again, change the HOST and Password set in RDS
-
   ```
 DATABASES = {
     'default': {
@@ -1246,10 +1255,19 @@ DATABASES = {
     }
 }
 ```
+Migrate the data to the server. 
+```
+$ python manage.py migrate
+$ python manage.py loaddata datadump.json
+```
+Right now, your postgres DB is on RDS!
  
-  
+#### STEP7. Other settings for linking to EC2 
+click in "security group", add security group so it can find the link; under "inbound"; add another rule. port rangee: 5432; add the private IP of your EC2 instance, and "/32" in the end which means only available for this one IP address.
 
 
-
+shortcut:
+sudo the previous command: $ sudo !!
+recursive search: ctrl + r
 
 
