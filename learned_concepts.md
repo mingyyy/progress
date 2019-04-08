@@ -1201,9 +1201,31 @@ $ python manage.py runserver
 
 Now, it is on your postgres DB. Open Admin.
 
-Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 ->
-  
-  
+Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 -> Public accessibility: yes; DB options: djitter (IAM: identity access management) => add security group so it can find the link
+
+Endpoint
+djitter.col25ju7jeyk.us-west-2.rds.amazonaws.com
+
+In PgAdmin4, adding Server: 
+1. General: add name
+2. Connection: add **endpoint** of the RDS server to Hostname/address, password is the new password we set in RDS
+
+Now, we have created a server in our remote server. Click on it and we are connected to the server in RDS.
+
+Open settings.py file again, change the HOST and Password set in RDS
+
+  ```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'name of your db in RDS',
+        'USER': 'postgres',
+        'PASSWORD': 'password for postgres',
+        'HOST': 'endpoint',
+        'PORT': '5432',
+    }
+}
+```
  
   
 
