@@ -1177,17 +1177,34 @@ $ sudo nginx -t
 ### Lunes
 Setting the psql in the PATH
 
+```
 $ vim ~/.bash_profile
 $ source ~/.bash_profile
+```
 
 Now you have the psql on the path
 $ which psql
+
+STEP1. make a json dump to export data from Sqlite3 to a json file
+```$ python3 manage.py dumpdata > datadump.json```
+STEP2. Create a database <db_name>
+STEP3. Change DB in settings.py.
+from sqlites
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+```
+change to postgres
 
 ```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'name of your db',
+        'NAME': '<db_name>',
         'USER': 'postgres',
         'PASSWORD': 'password for postgres',
         'HOST': 'localhost',
@@ -1196,12 +1213,14 @@ DATABASES = {
 }
 ```
 Go to the right directory and migrate to postgres DB
+```
 $ python manage.py migrate
 $ python manage.py runserver
+```
 
 Now, it is on your postgres DB. Open Admin.
 
-Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 -> Public accessibility: yes; DB options: djitter (IAM: identity access management) => click in "security group", add security group so it can find the link; under "inbound"; add another rule(MyIP) 
+Login AWS, go to RDS -> Database ->create Database -> click on "only enable options eligible for RDS Free Usage Tier" -> choose Postgres -> Settings: djitter, postgres, bali2019 -> Public accessibility: yes; DB options: djitter (IAM: identity access management) => click in "security group", add security group so it can find the link; under "inbound"; add another rule. port rangee: 5432; add the private IP of your EC2 instance, and "/32" in the end which means only available for this one IP address.
 
 
 Endpoint
