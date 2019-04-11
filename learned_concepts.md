@@ -1271,3 +1271,11 @@ sudo the previous command: $ sudo !!
 recursive search: ctrl + r
 
 
+### Security settings
+1. private IP of EC2 instance
+2. local IP address for connecting through pgadmin
+
+restart .nginx, .gunicorn .daemon
+install psycopg2 / apat-get postgres
+
+
