@@ -1050,6 +1050,7 @@ $ mv ../Downloads/ming_bali.pem .
 11. change security owner read only: $ chmod 400 ming_bali.pem
 12. when you are in .ssh folder, connect to server, based on DNS(domain name server) or server info given by AWS
 $ ssh -i "ming_bali.pem" ubuntu@ec2-34-213-211-97.us-west-2.compute.amazonaws.com
+**check if the SSH inbound is set to the right IP, otherwise change it to Anywhere**
 13. when asked, type: yes
 14. now we are at ubuntu@ip-172-31-24-209:~$
 15. security group -> inbound -> edit inbound rules -> click on My IP: it will change to a new IP 
