@@ -1053,24 +1053,37 @@ $ ssh -i "ming_bali.pem" ubuntu@ec2-34-213-211-97.us-west-2.compute.amazonaws.co
 13. when asked, type: yes
 14. now we are at ubuntu@ip-172-31-24-209:~$
 15. security group -> inbound -> edit inbound rules -> click on My IP: it will change to a new IP 
-16. install python, nginx sql curl etc here:
+16. install python, nginx sql curl etc here(when asked yes or no, input y):
+
 $ sudo apt-get update
+
 $ sudo apt-get install python3-pip
+
 $ sudo apt-get install python3-dev
+
 $ sudo apt-get install nginx
+
 $ sudo apt-get install curl
+
 $ sudo apt-get install libmysqlclient-dev
+
 $ sudo apt-get install python3-venv
+
 (sudo = superuser do, which you can only install in superuser level)
 
 STEP 3.
 
 create directory in server: ubuntu@ip-172-31-24-209:~$ mkdir twitter_proj
 $ cd twitter_proj/
+
 $ git clone https://github.com/mingyyy/django-twitter-clone
+
 $ cd django-twitter-clone/
+
 create virtual environment: $ python3 -m venv env
+
 activate virtual environment: $ source env/bin/activate
+
 clone from github: $ git clone https://github.com/martin-martin/django-twitter-clone.git
 $ cd django-twitter-clone
 recursive install: $ pip install -r requirements.txt
@@ -1088,6 +1101,8 @@ Now it's running....
 
 Then, we close the session: ctrl+c, web is not working after this. 
 Next we test gunicorn to run our server when we are on the session: $ gunicorn --bind 0.0.0.0:8000 djitter.wsgi
+if not working, check if django is installed:
+$ sudo apt pip install django
 Again, the web app is running...
 
 ~/$ is the root
@@ -1121,7 +1136,7 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=Ubuntu
+User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/twitter_proj/django-twitter-clone/djitter
 ExecStart=/home/ubuntu/twitter_proj/django-twitter-clone/env/bin/gunicorn \
@@ -1172,6 +1187,15 @@ server {
 $ sudo ln -s /etc/nginx/sites-available/djitter/etc/nginx/sites-enabled
 $ sudo nginx -t
 
+## S3
+follow Vitor tutorial
+1. AWS:set up IAM
+2. AWS:create bucket
+3. Python: settings.py and storage backend file in the project
+4. Python: $python manage.py collectstatic (slow)
+5. AWS: static/media files should be online.
+6. Once it works locally, remotely it should work too. Don't forget to restart gunicorn and nginx; 
+collectstatic again (much faster)
 
 ## Week 8
 ### Lunes
